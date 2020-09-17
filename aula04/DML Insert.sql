@@ -1,0 +1,101 @@
+INSERT INTO CLIENTE (CLI_CODIGO, CLI_CPF, CLI_RG, CLI_NOME, CLI_ENDE, CLI_ENDENUM, CLI_ENDECOMPL, CLI_BAIRRO, CLI_ESTADO, CLI_CEP , CLI_NASCIMENTO) 
+VALUES (1, '998.599.658-13', '45.322.427-X','Pedro Paulo','Rua Andorinha','12','casa','Passaros','SP','12121-451',TO_DATE ('2020/04/12','yyyy/mm/dd'));
+
+INSERT INTO CLIENTE (CLI_CODIGO, CLI_CPF, CLI_RG, CLI_NOME, CLI_ENDE, CLI_ENDENUM, CLI_ENDECOMPL, CLI_BAIRRO, CLI_ESTADO, CLI_CEP , CLI_NASCIMENTO)
+VALUES (2, '222.222.222-22', '71.665.124.9','Mateus Henrique','Rua Pomba','20','casa','Passaros','PR','12121-452',TO_DATE ('2020/05/13','yyyy/mm/dd') );
+
+INSERT INTO CLIENTE (CLI_CODIGO, CLI_CPF, CLI_RG, CLI_NOME, CLI_ENDE, CLI_ENDENUM, CLI_ENDECOMPL, CLI_BAIRRO, CLI_ESTADO, CLI_CEP , CLI_NASCIMENTO) 
+VALUES (3, '253.225.672-12', '65.564.987.5','Marcelo Pereira','Rua Araras','14','casa','Passaros','SC','12121-453',TO_DATE ('2015/01/10','yyyy/mm/dd'));
+
+INSERT INTO CLIENTE (CLI_CODIGO, CLI_CPF, CLI_RG, CLI_NOME, CLI_ENDE, CLI_ENDENUM, CLI_ENDECOMPL, CLI_BAIRRO, CLI_ESTADO, CLI_CEP , CLI_NASCIMENTO) 
+VALUES (4, '879.478.654-89', '78.789.546-4','Marcia Maria','Rua Tucano','47','casa','Passaros','RJ', NULL, TO_DATE ('2000/05/22','yyyy/mm/dd'));
+
+INSERT INTO CLIENTE (CLI_CODIGO, CLI_CPF, CLI_RG, CLI_NOME, CLI_ENDE, CLI_ENDENUM, CLI_ENDECOMPL, CLI_BAIRRO, CLI_ESTADO, CLI_CEP , CLI_NASCIMENTO)
+VALUES (5, '456.654.123-45', '47.874.654-X','Eduarda Cardoso','Rua Papagaio','8','casa','Passaros','SP','12121-455',TO_DATE ('2010/04/12','yyyy/mm/dd'));
+
+INSERT INTO CLIENTE (CLI_CODIGO, CLI_CPF, CLI_RG, CLI_NOME, CLI_ENDE, CLI_ENDENUM, CLI_ENDECOMPL, CLI_BAIRRO, CLI_ESTADO, CLI_CEP , CLI_NASCIMENTO)
+VALUES (6, '478.987.123-78', '79.546.321-X','CÃ¡ssio Ramos','Rua Calopsita','78','casa','Passaros','MG','12121-456',TO_DATE ('2020/04/12','yyyy/mm/dd'));
+
+INSERT INTO CLIENTE (CLI_CODIGO, CLI_CPF, CLI_RG, CLI_NOME, CLI_ENDE, CLI_ENDENUM, CLI_ENDECOMPL, CLI_BAIRRO, CLI_ESTADO, CLI_CEP , CLI_NASCIMENTO)
+VALUES (7, '745.986.456-14', '98.210.627-8','Fagner RancaPerna','Rua PavÃ£o','55','casa','Passaros','SP',NULL,TO_DATE ('2012/04/12','yyyy/mm/dd') );
+
+INSERT INTO CLIENTE (CLI_CODIGO, CLI_CPF, CLI_RG, CLI_NOME, CLI_ENDE, CLI_ENDENUM, CLI_ENDECOMPL, CLI_BAIRRO, CLI_ESTADO, CLI_CEP , CLI_NASCIMENTO)
+VALUES (8, '986.741.258-06', '25.107.951-0','Jô Soares','Rua Tuiuiu','98','casa','Passaros','SP','12121-458',TO_DATE ('2020/04/12','yyyy/mm/dd'));
+
+INSERT INTO CLIENTE (CLI_CODIGO, CLI_CPF, CLI_RG, CLI_NOME, CLI_ENDE, CLI_ENDENUM, CLI_ENDECOMPL, CLI_BAIRRO, CLI_ESTADO, CLI_CEP , CLI_NASCIMENTO)
+VALUES (9, '753.681.159-32', '80.897.231-X','Luan','Rua do Freio de Mão Puxado','78','casa','Animais','SP','12781-456',TO_DATE ('1999/02/20','yyyy/mm/dd') );
+
+INSERT INTO CLIENTE (CLI_CODIGO, CLI_CPF, CLI_RG, CLI_NOME, CLI_ENDE, CLI_ENDENUM, CLI_ENDECOMPL, CLI_BAIRRO, CLI_ESTADO, CLI_CEP , CLI_NASCIMENTO) 
+VALUES (10, '861.784.236-87', '22.665.324-X','Grizelda Pereira ','Rua Beija-flor','9','casa','Passaros','SP','12121-459',TO_DATE ('2014/12/12','yyyy/mm/dd') );
+
+insert into PRODUTO
+values 
+(1, 'mouse xuxa', 12, 32, 9, 'PC'),
+(2, 'tv xuxa', 4, 2, 16, 'MT'),
+(3, 'modder da xuxa', 15, 3, 12, 'KG'),
+(4, 'xuxa volante', 7, 12, 4, 'PC'),
+(5, 'pc da xuxa little poney', 03, 43, 5, 'LT'),
+(6, 'pc da xuxa pc da xuxa', 8, 9, 98, 'PC'),
+(7, 'xuxa xunxando a chucha na chuva', 10, 08, 20, 'KG');
+
+INSERT INTO telefone_tipo 
+VALUES
+(1, 'RESIDENCIAL'),
+(2, 'CELULAR'),
+(3, 'COMERCIAL'),
+(4, '0800');
+
+insert into TELEFONE
+values
+(1, 4, 14, '996394460'),
+(2, 1, 11, '32373034'),
+(3, 2, 18, '998818491'),
+(4, 4, 21, '994759183'),
+(5, 3, 22, '918444365'),
+(6, 3, 14, '996424147'),
+(7, 1, 12, '995721454'),
+(8, 2, 11, '950849845');
+
+insert into CLIENTE_TELEFONE
+values
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6),
+(6, 1),
+(6, 3),
+(7, 2),
+(7, 5),
+(7, 1),
+(8, 2),
+(8, 8),
+(9, 1),
+(9, 2),
+(9, 3),
+(9, 4);
+
+INSERT INTO VENDA
+VALUES
+(1, 10, '2020-09-15', 12000, NULL),
+(2, 1, '2020-09-11', 100, NULL),
+(3, 3, '2020-09-01', 1234, NULL),
+(4, 10, '2020-09-09', 32, NULL),
+(5, 2, '2020-09-30', 43211, NULL),
+(6, 1, '2020-09-16', 98, NULL),
+(7, 5, '2020-09-16', 654, NULL),
+(9, 9, '2020-09-16', 987.78, NULL),
+(10, 7, '2020-09-22', 5643.23, NULL),
+(11, 6, '2020-09-21', 1000, NULL);
+
+insert into VENDA_PRODUTO
+values
+(1, 5, 100, 80),
+(3, 1, 50, 8),
+(4, 3, 200, 55),
+(5, 1, 2, 17),
+(6, 2, 8, 33),
+(7, 5, 20, 44),
+(1, 2, 15, 55),
+(1, 1, 5, 66);
