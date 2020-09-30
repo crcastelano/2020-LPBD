@@ -1,0 +1,77 @@
+-- a) Liste todos os campos e linhas da tabela Gravadora
+SELECT * FROM Gravadora;
+
+-- b)Liste todas as linhas dos campos CD_ID, CD_NOME, CD_PRECO da tabela CD
+SELECT cd_id, cd_nome, cd_preco_venda FROM CD;
+
+-- c) Liste todas as linhas dos campos AUT_ID, AUT_NOME, da tabela AUTOR em ordem alfabetica
+SELECT aut_id, aut_nome FROM Autor ORDER BY aut_nome;
+
+-- d) Repita o comando anterior em ordem alfabética decrescente
+SELECT aut_id, aut_nome FROM Autor ORDER BY aut_nome DESC;
+
+-- e) Liste todos os CDs da Gravadora 3
+SELECT * FROM CD WHERE grav_id = 3;
+
+-- f) Liste as colunas cd_nome, cd_preco, dos CD's
+-- cujos preços de venda sejam inferiores a 20,00 e sejam da gravadora 3;
+SELECT cd_nome, cd_preco_venda 
+  FROM CD 
+ WHERE grav_id = 3 AND cd_preco_venda < 20;
+
+-- g) Liste as colunas da tabela gravadora cujo grav_contato seja nulo;
+SELECT * 
+  FROM gravadora 
+ WHERE grav_contato IS NULL;
+
+-- h) Liste as colunas da tabela gravadora cujo grav_contato não nulo;
+SELECT * 
+  FROM Gravadora
+ WHERE grav_contato IS NOT NULL;
+
+-- i) Liste os CD's cujos cd_preco esteja entre 15,00 e 30,00;
+SELECT * 
+  FROM CD
+ WHERE cd_preco_venda >= 15 
+   AND cd_preco_venda <= 30;
+
+SELECT * 
+  FROM CD
+ WHERE cd_preco_venda BETWEEN 15 AND 30; 
+
+-- j) Liste todos os CD's cuja cd_dt_lancamento seja posterior ao ano 01/01/2000;
+SELECT *
+  FROM CD
+ WHERE cd_dt_lancamento > '2000-01-01';
+
+-- k) Liste as Músicas cujo nome comece com A da tabela Musica;
+SELECT * 
+  FROM musica 
+ WHERE upper(mus_nome) LIKE 'A%';
+
+-- l) Liste os CD's cuja segunda letra do cd_nome seja a letra E;
+SELECT * 
+  FROM CD 
+ WHERE upper(cd_nome) LIKE '_E%';
+
+-- m) Liste os CD's que possuam a letra O em qualquer posição do cd_nome;
+SELECT * 
+  FROM CD
+ WHERE upper(cd_nome) LIKE '%O%';
+
+-- n) Liste os CD's que possuam cd_preco inferior a 30,00
+-- em ordem decrescente de cd_dt_lancamento;
+SELECT * 
+  FROM CD 
+ WHERE cd_preco_venda < 30 
+ ORDER BY cd_dt_lancamento DESC;
+
+-- o) Liste as músicas cuja mus_id seja 1,3,3;
+SELECT *
+  FROM musica 
+ WHERE mus_id = 1 OR mus_id = 3 OR mus_id = 5;
+  
+SELECT *
+  FROM musica 
+ WHERE mus_id IN (1, 3, 5);
+ 
